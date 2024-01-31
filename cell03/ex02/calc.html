@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body {
+				width: 100%;
+				text-align: center;
+				align-items: center;
+			}
+
+			table {
+				position: relative;
+					left: 45.3%;
+				align-self: center;
+				align-items: center;
+				display: flex;
+			}
+
+		</style>
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Calc</h1>
+		<table>
+			<tr>
+				<td>
+					<!-- <textarea id="first_op" name="first_op" rows="1" cols="55">Enter the first operand</textarea><br><br> -->
+					<input type="number" name="number1" id="first_op" placeholder="First Number"><br><br>
+				</td>
+				<br>
+			</tr>
+			<tr>
+				<td>
+					<select id="operator" name="operator">
+						Enter the operator
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+						<option value="%">%</option>
+					</select><br><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="number" name="second_op" id="second_op" placeholder="Second Number"><br><br>
+				</td>
+				<br>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" onclick="calc()">Try Me!</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+
+	<script>
+		function calc(){
+			var op_1 = parseInt(document.getElementById('first_op').value);
+			var op_2 = parseInt(document.getElementById('second_op').value);
+			var operator = document.getElementById('operator').value;
+
+			if (isNaN(op_1) || isNaN(op_2) || op_1 < 0 || op_2 < 0)
+			{
+				alert("Error :\(");
+				console.log("Error :(");
+				return ;
+			}
+
+			var result;
+			switch(operator)
+			{
+				case '+':
+					result = op_1 + op_2;
+					break ;
+				case '+':
+					result = op_1 - op_2;
+					break ;
+				case '*':
+					result = op_1 * op_2;
+					break ;
+				case '/':
+					if (op_2 == 0)
+					{
+						alert("It’s over 9000!");
+						console.log("It’s over 9000!");
+						return ;
+					}
+					result = op_1 / op_2;
+					break ;
+				case '%':
+					if (op_2 == 0)
+						{
+							alert("It’s over 9000!");
+							console.log("It’s over 9000!");
+							return ;
+						}
+					result = op_1 % op_2;
+					break ;
+			}
+			alert(op_1 + " " + operator + " " + op_2 + " = " + result);
+			console.log(op_1 + " " + operator + " " + op_2 + " = " + result);
+		}
+
+		function myFunction(){
+		console.log('Please, use me ...');
+		alert('Please, use me ...');
+	}
+
+	myFunction();
+
+	setInterval(function(){
+		myFunction()
+	}, 30000)
+
+	</script>
+</html>

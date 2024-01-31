@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="backgroound.css">
+		<title>Document</title>
+	</head>
+		<body>
+			<button type="button" onclick="myFunction()">Change BG Color</button>
+		</body>
+	<script>
+		function myFunction() {
+			const new_color = Math.floor(Math.random()*16777215).toString(16);
+			console.log("#" + new_color);
+			document.body.style.backgroundColor = "#" + new_color;
+		}
+	</script>
+</html>

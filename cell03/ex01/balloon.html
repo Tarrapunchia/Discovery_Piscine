@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#balloon {
+			min-height: 200px;
+			min-width: 200px;
+			border-radius: 50%;
+			padding: 0;
+		}
+
+		#balloon:hover {
+			opacity: .7;
+			color: blue;
+		}
+
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<center><div id="balloon" onclick="change_dim(1)" onmouseenter="change_dim(0)" onmouseleave="change_dim(2)" style="height: 200px; width: 200px; background-color: red;"></center>
+
+	</div>
+</body>
+
+
+
+<script>
+	function change_dim(flag){
+		console.log(document.getElementById('balloon').style.backgroundColor);
+		if (flag == 1)
+		{
+			var new_dim = parseInt(document.getElementById('balloon').style.height) + 10;
+			if (document.getElementById('balloon').style.backgroundColor == "rgb(255, 0, 0)")
+				document.getElementById('balloon').style.backgroundColor = "rgb(0, 128, 0)";
+			else if (document.getElementById('balloon').style.backgroundColor == "rgb(0, 128, 0)")
+				document.getElementById('balloon').style.backgroundColor = "rgb(0, 0, 255)";
+			else
+				document.getElementById('balloon').style.backgroundColor = "rgb(255, 0, 0)";
+		}
+		else if (flag == 2)
+			var new_dim = parseInt(document.getElementById('balloon').style.height) + 5;
+		else
+			var new_dim = parseInt(document.getElementById('balloon').style.height) - 5;
+		if (new_dim > 420 || new_dim < 200 || (new_dim == 205 && flag == 2))
+			new_dim = 200;
+		document.getElementById('balloon').style.height = new_dim + "px";
+		document.getElementById('balloon').style.width = new_dim + "px";
+		console.clear;
+		console.log("height " + new_dim + " px");
+		console.log("width " + new_dim + " px");
+	}
+</script>
+</html>

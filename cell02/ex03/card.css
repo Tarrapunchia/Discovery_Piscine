@@ -1,0 +1,83 @@
+html, body {
+	text-align: center;
+	align-content: center;
+	align-self: center;
+	align-items: center;
+	height: 100%;
+}
+
+table {
+	width: 80%;
+	height: 80%;
+	max-height: 80%;
+	box-shadow: 5px 5px 5px 5px black;
+	text-align: center;
+}
+
+#profile_pic {
+	width: 50%;
+}
+
+#username {
+	font-size: 40px;
+	font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+}
+
+#description {
+	font-size: 13px;
+	font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+	color: gray;
+}
+
+#social_links {
+	word-spacing: 10px;
+}
+
+#contact_btn {
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+	font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+	background-color: black;
+	color: white;
+}
+
+.fa:hover, #contact_btn:hover {
+	opacity: 0.7;
+  }
+
+.fa-facebook {
+	height: 100%;
+	width: 20px;
+	font-size: 70px;
+	border-radius: 30%;
+	background-color: blue;
+	color: white;
+}
+
+.fa-github {
+	height: 100%;
+	width: 20px;
+	font-size: 70px;
+	border-radius: 30%;
+	background-color: black;
+	color: white;
+}
+
+.fa-twitter {
+	height: 100%;
+	width: 20px;
+	font-size: 70px;
+	border-radius: 30%;
+	background-color: blue;
+	color: white;
+}
+
+.fa-instagram {
+	height: 100%;
+	width: 20px;
+	font-size: 70px;
+	border-radius: 30%;
+	background-color: violet;
+	color: white;
+}

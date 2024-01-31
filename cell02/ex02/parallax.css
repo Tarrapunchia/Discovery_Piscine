@@ -1,0 +1,50 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.parallax_one {
+	background-image: url('profile_pic.png');
+
+	min-height: 500px;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.parallax_two {
+	background-image: url('profile_pic.png');
+
+	min-height: 500px;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	flex-direction: column;
+	position: relative;
+}
+
+#header{
+	position: absolute;
+	top: 50%;
+	left: 44.5%;
+}
+
+/*black box */
+#text_box {
+	height: 600px;
+	background-color: beige;
+	font-size: 20px;
+	text-align: center;
+}
+
+#text {
+	position: relative;
+		top: 50%;
+}
