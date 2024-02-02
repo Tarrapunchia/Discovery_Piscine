@@ -1,0 +1,26 @@
+#toDo {
+	position: relative;
+		left: 10%;
+	width: 80%;
+	height: 80%;
+	max-height: 80%;
+	box-shadow: 5px 5px 5px 5px black;
+	text-align: center;
+}
+
+td {
+	width: 100%;
+}
+
+button {
+	width: 80%;
+}
+
+#New, #ahia {
+	position: relative;
+		left: 10%;
+}
+
+#bottom {
+	position: relative;
+}

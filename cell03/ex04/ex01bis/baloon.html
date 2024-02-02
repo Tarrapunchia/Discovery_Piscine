@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<style>
+		#balloon {
+			min-height: 200px;
+			min-width: 200px;
+			border-radius: 50%;
+			padding: 0;
+		}
+
+		#balloon:hover {
+			opacity: .7;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<center><div id="balloon" style="height: 200px; width: 200px; background-color: #ff0000;"></center>
+
+	</div>
+</body>
+
+<script>
+$(document).ready(function(){
+    $("#balloon").click(function(){
+		var new_dim = $(this).height() + 10;
+		if (new_dim > 420)
+			new_dim = 200;
+		if ($(this).css("background-color") == "rgb(255, 0, 0)")
+			$(this).css("background-color", "rgb(0, 128, 0)");
+		else if ($(this).css("background-color") == "rgb(0, 128, 0)")
+			$(this).css("background-color", "rgb(0, 0, 255)");
+		else if ($(this).css("background-color") == "rgb(0, 0, 255)")
+			$(this).css("background-color", "rgb(255, 0, 0)");
+        $(this).height(new_dim);
+		$(this).width(new_dim);
+		console.log(new_dim);
+    });
+
+	$("#balloon").hover(function(){
+		if ($(this).height() - 5 > 200)
+		{
+			var new_dim = $(this).height() - 5;
+			$(this).height(new_dim);
+			$(this).width(new_dim);
+		}
+	})
+
+});
+</script>
+</html>
