@@ -1,3 +1,4 @@
+![alt text](https://github.com/Tarrapunchia/Discovery_Piscine/blob/main/img/42-network-logo.svg)
 
 # Discovery Piscine
 
@@ -17,7 +18,7 @@ An introduction to web development using HTML, java script and CSS in a 5 days 8
 
 
 
-
+![alt text](https://github.com/Tarrapunchia/Discovery_Piscine/blob/main/img/holygraph.png)
 
 
 ## Roadmap
